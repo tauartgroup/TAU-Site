@@ -1,26 +1,32 @@
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
 
-var w = window.innerWidth;
-var h = window.innerHeight;
+:root {
+  --background-color: rgba(0, 0, 0, 1.0);
+  --background-text-color: rgba(24, 26, 27, 0.8);
+  --text-color: rgba(200, 200, 200, 1);
+
+  --screen-width = window.innerWidth;
+  --screen-height = window.innerHeight;
+}
 
 html, body {
     background: #333 url("https://codepen.io/images/classy_fabric.png");
-    width: w;
-    height: h;
+    width: --screen-width;
+    height: --screen-height;
 }
 
 /*function myFunction {
     var x = document.getElementById(demo);
-    x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
+    x.innerHTML = "Browser width: " + --screen-width + ", height: " + --screen-height + ".";
 }*/
 
 /*var x = document.getElementById("demo");
-x.innerHTML = "Browser width: " + w + ", height: " + h + ".";*/
+x.innerHTML = "Browser width: " + --screen-width + ", height: " + --screen-height + ".";*/
 
 .slides {
     padding: 2;
-    width: w;
-    height: h;
+    width: --screen-width;
+    height: --screen-height;
     display: block;
     margin: 0 auto;
     position: relative;
@@ -42,8 +48,8 @@ x.innerHTML = "Browser width: " + w + ", height: " + h + ".";*/
 .slide {
     top: 0;
     opacity: 0;
-    width: w * .95;
-    height: h * .95;
+    width: --screen-width * .95;
+    height: --screen-height * .95;
     display: block;
     position: absolute;
 
@@ -53,19 +59,19 @@ x.innerHTML = "Browser width: " + w + ", height: " + h + ".";*/
 }
 
 .slide img {
-    width: w * .9;
-    height: h * .9;
+    width: --screen-width * .9;
+    height: --screen-height * .9;
 }
 
 .slide iframe {
-    width: w * .9;
-    height: h * .9;
+    width: --screen-width * .9;
+    height: --screen-height * .9;
 }
 
 
 .nav label {
-    width: w * .2;
-    height: h * 0.9;
+    width: --screen-width * .2;
+    height: --screen-height * 0.9;
     display: none;
     position: absolute;
 
@@ -79,8 +85,8 @@ x.innerHTML = "Browser width: " + w + ", height: " + h + ".";*/
     font-size: 156pt;
     text-align: center;
     line-height: 312pt;
-    line-height: h * 0.9;
-    /*line-height: h * .3;*/
+    line-height: --screen-height * 0.9;
+    /*line-height: --screen-height * .3;*/
     font-family: "Varela Round", sans-serif;
     background-color: rgba(255, 255, 255, .3);
     text-shadow: 0px 0px 15px rgb(119, 119, 119);
